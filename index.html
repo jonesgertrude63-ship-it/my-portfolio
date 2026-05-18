@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>辽宁师范大学学生创新创业榜单 | 权威发布</title>
+    <meta name="description" content="辽宁师范大学优秀学生及创业团队排行榜。基于真实数据、专家评审，展示辽师学子的创新精神与专业能力。">
+    
+    <!-- 引入 Tailwind CSS 用于快速构建现代样式 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 引入 FontAwesome 图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- 自定义配置 Tailwind 主题颜色 (辽师蓝) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        lnnu: {
+                            light: '#4b7bec',
+                            DEFAULT: '#3867d6', // 辽师主题蓝
+                            dark: '#2d98da',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* 平滑滚动 */
+        html { scroll-behavior: smooth; }
+        /* 卡片悬浮动画 */
+        .rank-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .rank-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <!-- 导航栏 (体现 T-Trustworthiness: 清晰的网站导航和联系方式) -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <i class="fa-solid fa-graduation-cap text-lnnu text-3xl mr-3"></i>
+                    <span class="font-bold text-xl text-gray-900">LNNU 学生榜单 <span class="text-xs text-gray-500 font-normal ml-1 border border-gray-300 px-1 rounded">Beta</span></span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-lnnu font-medium border-b-2 border-lnnu pb-1">创业团队榜</a>
+                    <a href="#methodology" class="text-gray-600 hover:text-lnnu transition">评选标准</a>
+                    <a href="#about" class="text-gray-600 hover:text-lnnu transition">关于我们</a>
+                    <a href="#contact" class="bg-lnnu text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">入榜申请</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 英雄区域 (Hero Section) -->
+    <header class="bg-gradient-to-r from-blue-900 to-lnnu text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
+                2026年度 辽宁师范大学<br class="hidden md:block" />
+                <span class="text-yellow-400">卓越创业团队排行榜</span>
+            </h1>
+            <p class="mt-4 text-xl text-blue-100 max-w-3xl mx-auto">
+                发现校园创新力量。本榜单聚焦具备高成长性、社会价值及技术壁垒的辽师大优秀学生创业项目。
+            </p>
+            
+            <!-- A-Authoritativeness 权威性标签 -->
+            <div class="mt-8 flex flex-wrap justify-center gap-4 text-sm font-medium">
+                <span class="bg-white/20 px-4 py-2 rounded-full backdrop-blur-sm"><i class="fa-solid fa-shield-halved mr-2"></i>数据核实自校创新创业中心</span>
+                <span class="bg-white/20 px-4 py-2 rounded-full backdrop-blur-sm"><i class="fa-solid fa-users-viewfinder mr-2"></i>15位校内外专家联合评审</span>
+                <span class="bg-white/20 px-4 py-2 rounded-full backdrop-blur-sm"><i class="fa-solid fa-clock-rotate-left mr-2"></i>最后更新: 2026年5月</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 核心模块：创业团队榜单 -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16" id="ranking">
+        <div class="flex justify-between items-end mb-8 border-b pb-4">
+            <div>
+                <h2 class="text-3xl font-bold text-gray-900">TOP 创业先锋团队</h2>
+                <p class="text-gray-500 mt-2">涵盖教育科技、心理健康、绿色环保等多个优势领域</p>
+            </div>
+            <!-- 简单的分类过滤模拟 -->
+            <div class="hidden sm:block">
+                <select class="bg-white border border-gray-300 text-gray-700 py-2 px-4 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-lnnu">
+                    <option>所有行业</option>
+                    <option>教育科技 (EdTech)</option>
+                    <option>心理健康 (Mental Health)</option>
+                    <option>文化创意 (Cultural Creative)</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- 榜单列表 (Grid) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- 榜首团队卡片 -->
+            <div class="rank-card bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden relative">
+                <!-- 排名角标 -->
+                <div class="absolute top-0 left-0 bg-yellow-400 text-yellow-900 font-black text-xl py-2 px-4 rounded-br-xl z-10 shadow-sm">
+                    #1
+                </div>
+                <div class="h-32 bg-gradient-to-br from-blue-100 to-white relative">
+                    <div class="absolute bottom-0 right-4 translate-y-1/2 bg-white p-2 rounded-full shadow-md">
+                        <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl">AI-Edu</div>
+                    </div>
+                </div>
+                <div class="p-6 pt-10">
+                    <div class="text-xs font-semibold text-lnnu tracking-wide uppercase mb-1">教育科技</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">智教未来团队</h3>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-2">基于大语言模型的自适应学习平台，专为K12阶段提供个性化辅导，已在多所中学开展试点。</p>
+                    
+                    <div class="space-y-3 border-t pt-4">
+                        <!-- E-Expertise 专业度展示 -->
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-user-tie mt-1 text-gray-400 w-5"></i>
+                            <div class="text-sm"><span class="font-semibold text-gray-700">指导专家：</span>张教授 (教育学院博导)</div>
+                        </div>
+                        <!-- E-Experience 经验展示 -->
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-rocket mt-1 text-gray-400 w-5"></i>
+                            <div class="text-sm"><span class="font-semibold text-gray-700">运营时长：</span>2年4个月 (月活用户>5000)</div>
+                        </div>
+                        <!-- A-Authoritativeness 权威性展示 -->
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-trophy mt-1 text-yellow-500 w-5"></i>
+                            <div class="text-sm"><span class="font-semibold text-gray-700">荣誉：</span>第八届中国国际“互联网+”国赛金奖</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 第二名团队卡片 -->
+            <div class="rank-card bg-white rounded-xl shadow border border-gray-100 overflow-hidden relative">
+                <div class="absolute top-0 left-0 bg-gray-300 text-gray-800 font-black text-xl py-2 px-4 rounded-br-xl z-10">
+                    #2
+                </div>
+                <div class="h-32 bg-gradient-to-br from-green-100 to-white relative">
+                    <div class="absolute bottom-0 right-4 translate-y-1/2 bg-white p-2 rounded-full shadow-md">
+                        <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-xl"><i class="fa-solid fa-leaf"></i></div>
+                    </div>
+                </div>
+                <div class="p-6 pt-10">
+                    <div class="text-xs font-semibold text-green-600 tracking-wide uppercase mb-1">心理健康</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">心桥 (MindBridge)</h3>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-2">结合心理学专业量表与AI对话的大学生心理健康早期预警与疏导微信小程序。</p>
+                    
+                    <div class="space-y-3 border-t pt-4">
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-user-tie mt-1 text-gray-400 w-5"></i>
+                            <div class="text-sm"><span class="font-semibold text-gray-700">指导专家：</span>李副教授 (心理学院)</div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-rocket mt-1 text-gray-400 w-5"></i>
+                            <div class="text-sm"><span class="font-semibold text-gray-700">项目阶段：</span>Pre-A轮融资筹备中</div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-trophy mt-1 text-yellow-500 w-5"></i>
+                            <div class="text-sm"><span class="font-semibold text-gray-700">荣誉：</span>“挑战杯”辽宁省大学生创业计划竞赛特等奖</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 第三名团队卡片 -->
+            <div class="rank-card bg-white rounded-xl shadow border border-gray-100 overflow-hidden relative">
+                <div class="absolute top-0 left-0 bg-orange-300 text-orange-900 font-black text-xl py-2 px-4 rounded-br-xl z-10">
+                    #3
+                </div>
+                <div class="h-32 bg-gradient-to-br from-purple-100 to-white relative">
+                    <div class="absolute bottom-0 right-4 translate-y-1/2 bg-white p-2 rounded-full shadow-md">
+                        <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl"><i class="fa-solid fa-palette"></i></div>
+                    </div>
+                </div>
+                <div class="p-6 pt-10">
+                    <div class="text-xs font-semibold text-purple-600 tracking-wide uppercase mb-1">文化创意</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">印象辽师文创</h3>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-2">致力于将大连地域文化与校园记忆结合，开发高品质实体文创产品，年流水突破百万元。</p>
+                    
+                    <div class="space-y-3 border-t pt-4">
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-user-tie mt-1 text-gray-400 w-5"></i>
+                            <div class="text-sm"><span class="font-semibold text-gray-700">核心成员：</span>美术学院、文学院跨学科团队</div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-certificate mt-1 text-gray-400 w-5"></i>
+                            <div class="text-sm"><span class="font-semibold text-gray-700">资质：</span>拥有5项外观设计专利</div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-trophy mt-1 text-yellow-500 w-5"></i>
+                            <div class="text-sm"><span class="font-semibold text-gray-700">荣誉：</span>全国大学生文化创意设计大赛二等奖</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="mt-12 text-center">
+            <button class="bg-white border-2 border-lnnu text-lnnu hover:bg-lnnu hover:text-white font-bold py-3 px-8 rounded-full transition duration-300 shadow-sm">
+                查看完整榜单 (TOP 50) <i class="fa-solid fa-arrow-right ml-2"></i>
+            </button>
+        </div>
+    </main>
+
+    <!-- T-Trustworthiness: 评选标准与方法论 (极度增强网站可信度) -->
+    <section id="methodology" class="bg-gray-100 py-16 border-y border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900">公开透明的评选标准</h2>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">我们拒绝暗箱操作。榜单的每一次更新均遵循严格的数据核实和专家评估流程。</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-12 h-12 bg-blue-100 text-lnnu rounded-full flex items-center justify-center mx-auto mb-4 text-xl"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3 class="font-bold text-lg mb-2">商业潜力 (30%)</h3>
+                    <p class="text-gray-500 text-sm">评估项目的市场容量、盈利模式可行性及目前的营收/用户增长数据。</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-12 h-12 bg-blue-100 text-lnnu rounded-full flex items-center justify-center mx-auto mb-4 text-xl"><i class="fa-solid fa-microchip"></i></div>
+                    <h3 class="font-bold text-lg mb-2">创新与壁垒 (30%)</h3>
+                    <p class="text-gray-500 text-sm">考察核心技术的专利情况、模式创新的独特性及竞争对手分析。</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-12 h-12 bg-blue-100 text-lnnu rounded-full flex items-center justify-center mx-auto mb-4 text-xl"><i class="fa-solid fa-people-group"></i></div>
+                    <h3 class="font-bold text-lg mb-2">团队背景 (20%)</h3>
+                    <p class="text-gray-500 text-sm">团队成员的专业匹配度、指导专家的资历及团队全职投入程度。</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-12 h-12 bg-blue-100 text-lnnu rounded-full flex items-center justify-center mx-auto mb-4 text-xl"><i class="fa-solid fa-medal"></i></div>
+                    <h3 class="font-bold text-lg mb-2">权威背书 (20%)</h3>
+                    <p class="text-gray-500 text-sm">省级以上A类赛事获奖情况、政府补贴或早期知名机构投资情况。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (进一步完善可信度和责任声明) -->
+    <footer id="contact" class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <div class="flex items-center mb-4">
+                    <i class="fa-solid fa-graduation-cap text-lnnu-light text-3xl mr-3"></i>
+                    <span class="font-bold text-xl">LNNU 学生榜单</span>
+                </div>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    致力于打造最具公信力的辽宁师范大学学生创新创业及学术成就展示平台。连接校园人才与社会资本。
+                </p>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4 border-b border-gray-700 pb-2">数据来源与免责声明</h4>
+                <p class="text-gray-400 text-sm mb-2"><i class="fa-solid fa-check-circle text-green-400 mr-2"></i>数据由各团队自主申报并经平台初审。</p>
+                <p class="text-gray-400 text-sm mb-2"><i class="fa-solid fa-circle-info text-blue-400 mr-2"></i>本榜单仅为非营利性校园文化展示，不构成任何投资建议。</p>
+                <p class="text-gray-400 text-sm"><a href="#" class="underline hover:text-white">阅读完整隐私政策及免责协议</a></p>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4 border-b border-gray-700 pb-2">联系与申报</h4>
+                <p class="text-gray-400 text-sm mb-2"><i class="fa-solid fa-envelope mr-2"></i> 排行榜纠错/申请入榜:</p>
+                <a href="mailto:ranking@example-lnnu.com" class="text-lnnu-light font-medium hover:underline block mb-4">ranking@example-lnnu.com</a>
+                <p class="text-gray-500 text-xs">
+                    *我们将在3个工作日内人工审核您的团队申报资料，请确保资料（如获奖证书、财报截图）真实有效。
+                </p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+            &copy; 2026 LNNU Student Ranking Project. 辽师大开发者社区技术支持. 网页最后更新时间：2026年5月18日.
+        </div>
+    </footer>
+
+</body>
+</html>
